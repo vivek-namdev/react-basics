@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function Useref() {
     return (
@@ -30,11 +30,38 @@ function FocusInput() {
 
 
 function Stopwatch() {
+
+    const [currentCount, setCurrentCount] = useState(0);
+
+    const timer = useRef(null);
+
+    function startClock() {
+        let value = setInterval(() => {
+            setCurrentCount((count) => count+1);
+        }, 100);
+
+        timer.current = value;
+    }
+
+    function stopClock() {
+
+        console.log(timer);
+
+        clearInterval(timer.current);
+        
+    }
+
     return (
         <div>
-            
+            <h1>Stopwatch</h1>
+
+            {currentCount}
+            <br/>
+
+            <button onClick={startClock}>Start</button>
+            <button onClick={stopClock}>Stop</button>
         </div>
     )
 }
 
-export default Useref;;
+export default Useref;
