@@ -1,10 +1,10 @@
-import Useref from "./Useref";
+import Lightbulb from "./Lightbulb";
 
 function App() {
 
   return (
     <div>
-      <Useref/>
+      <Lightbulb/>
     </div>
   )
 }
