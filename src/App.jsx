@@ -1,10 +1,10 @@
-import Lightbulb from "./Lightbulb";
+import Parent from './Parent'; // Named exports
 
 function App() {
 
   return (
     <div>
-      <Lightbulb/>
+      <Parent/>
     </div>
   )
 }
