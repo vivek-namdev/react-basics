@@ -1,10 +1,10 @@
-import Parent from './Parent'; // Named exports
+import Counter from './Counter'; // Named exports
 
 function App() {
 
   return (
     <div>
-      <Parent/>
+      <Counter/>
     </div>
   )
 }
